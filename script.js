@@ -56,3 +56,21 @@ $(function() {
       }
     });
 });
+
+function cyberpunkGlitch(element) {
+  const doGlitch = () => {
+    element.classList.add('glitch-blink');
+    setTimeout(() => {
+      element.classList.remove('glitch-blink');
+    }, Math.random() * 200 + 100); // entre 100ms e 300ms
+  };
+
+  setInterval(() => {
+    if (Math.random() > 0.7) { // 30% de chance de piscar
+      doGlitch();
+    }
+  }, Math.random() * 3000 + 1000); // entre 1s e 4s
+}
+
+cyberpunkGlitch(document.querySelector('.titulo-topo'));
+cyberpunkGlitch(document.querySelector('.subtitulo-fundo'));
