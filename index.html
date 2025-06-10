@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meu Livro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="turn.min.js"></script>
+</head>
+<body>
+  <div class="book-viewport">
+    <div class="book">
+      <div><img src="pages/page1.jpg" /></div>
+      <div><img src="pages/page2.jpg" /></div>
+      <div><img src="pages/page3.jpg" /></div>
+      <div><img src="pages/page4.jpg" /></div>
+      <!-- Adicione mais páginas conforme precisar -->
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('.book').turn({
+      width: 800,
+      height: 500,
+      autoCenter: true,
+      display: 'double',
+    });
+  </script>
+</body>
+</html>
