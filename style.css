@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#flipbook img {
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+.flipbook-container {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  background: #1c1c1c;
+}
+#flipbook {
+  width: 100%;
+  height: 100%;
+  position: relative;   /* necessário pro Turn.js calcular corretamente */
+  touch-action: none;   /* evita scroll/touch nativo e deixa só o drag do Turn.js */
+}
+#flipbook .page {
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+#flipbook .page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Mobile: fica mais alto que largo */
+@media (max-width: 768px) {
+  .flipbook-container {
+    aspect-ratio: 3 / 4;
+  }
+}

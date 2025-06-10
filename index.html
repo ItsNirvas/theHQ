@@ -2,28 +2,21 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <title>Meu Livro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flipbook Responsivo</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="turn.min.js"></script>
 </head>
 <body>
-  <div class="book-viewport">
-    <div class="book">
-      <div><img src="pages/page1.jpg" /></div>
-      <div><img src="pages/page2.jpg" /></div>
-      <div><img src="pages/page3.jpg" /></div>
-      <div><img src="pages/page4.jpg" /></div>
-      <!-- Adicione mais páginas conforme precisar -->
-    </div>
+
+  <div class="flipbook-container">
+    <div id="flipbook"></div>
   </div>
 
-  <script>
-    document.querySelector('.book').turn({
-      width: 800,
-      height: 500,
-      autoCenter: true,
-      display: 'double',
-    });
-  </script>
+  <!-- 1) jQuery (sempre antes do Turn.js) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- 2) Turn.js v3 (o mais maduro e simples de usar) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/3/turn.min.js"></script>
+  <!-- 3) Seu script DEPOIS dos dois acima -->
+  <script src="script.js"></script>
 </body>
 </html>
